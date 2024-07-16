@@ -10,7 +10,7 @@ TRUNCATE TABLE bronze.shipmentdetails
 # COMMAND ----------
 
 %sql
-MAGIC TRUNCATE TABLE bronze.invoices
+TRUNCATE TABLE bronze.invoices
 
 # COMMAND ----------
 
