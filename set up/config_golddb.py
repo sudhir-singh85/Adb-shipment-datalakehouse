@@ -9,7 +9,7 @@ gold_folder_path
 
 # MAGIC %sql
 # MAGIC CREATE DATABASE IF NOT EXISTS gold
-# MAGIC LOCATION '/mnt/datalakesudhircin/dev/gold'
+# MAGIC LOCATION '/mnt/<storageaccountcontainer>/dev/gold'
 
 # COMMAND ----------
 
@@ -17,7 +17,7 @@ gold_folder_path
 # MAGIC CREATE TABLE IF NOT EXISTS gold.watermark(watermarkid int,
 # MAGIC TableName varchar(100),
 # MAGIC WatermarkValue Date)Using DELTA
-# MAGIC Location '/mnt/datalakesudhircin/dev/gold/watermark'
+# MAGIC Location '/mnt/<storageaccountcontainer>/dev/gold/watermark'
 
 # COMMAND ----------
 
@@ -40,7 +40,7 @@ gold_folder_path
 # MAGIC   AddressID int,
 # MAGIC   Ingestion_Date TIMESTAMP
 # MAGIC )USING DELTA
-# MAGIC LOCATION '/mnt/datalakesudhircin/dev/gold/dim_Customer'
+# MAGIC LOCATION '/mnt/<storageaccountcontainer>/dev/gold/dim_Customer'
 
 # COMMAND ----------
 
@@ -50,7 +50,7 @@ gold_folder_path
 # MAGIC   PersonName varchar(255),
 # MAGIC   Ingestion_Date TIMESTAMP
 # MAGIC )USING DELTA
-# MAGIC LOCATION '/mnt/datalakesudhircin/dev/gold/dim_Person'
+# MAGIC LOCATION '/mnt/<storageaccountcontainer>/dev/gold/dim_Person'
 
 # COMMAND ----------
 
